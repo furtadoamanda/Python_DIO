@@ -1,6 +1,6 @@
 # Python | Digital Innovation One
 
-Repositório criado para armazenar os códigos realizados ao longo das aulas de Python incluídas nos bootcamps:
+Repositório criado para armazenar os códigos e desafios realizados ao longo das aulas de Python incluídas nos bootcamps:
 - Coding The Future Squadio - Python Data Analytics
 - Coding The Future Vivo - Python AI Backend Developer 
 
