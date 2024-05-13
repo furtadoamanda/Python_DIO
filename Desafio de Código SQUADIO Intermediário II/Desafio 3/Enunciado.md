@@ -27,6 +27,7 @@ Aqui estão os critérios mágicos para cada elemento:
 - Elemento Ar:  
     Caso não se encaixe nos critérios anteriores.  
 
+❕ _OBS: (incompatibilidade entre o enunciado e os exemplos/testes)_ 
 
 ## Entrada
 Seu código deve receber as seguintes entradas do usuário:  
