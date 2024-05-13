@@ -1,23 +1,37 @@
-# Função para prever a afinidade elemental do feiticeiro
-def prever_afinidade_elemental(intensidade, componente_raro, fase_lunar, idade_feiticeiro, afinidade_animais):
-    # Convertendo a resposta do componente raro e afinidade com animais para booleanos
-    componente_raro = componente_raro.lower() == "sim"
-    afinidade_animais = afinidade_animais.lower() == "sim"
+# Coletar as informações do usuário
+intensidade_feitico = int(input("Qual a intensidade do feitiço? "))
 
-    # Desenvolva a Lógica de decisão para prever a afinidade elemental
-    if intensidade >= 5 and fase_lunar == "crescente" and idade_feiticeiro > 100:
-        return "A afinidade elemental do feiticeiro é com o elemento Fogo!"
-   
+componente_raro_input = input("Presença de componente raro? ")
+componente_raro = componente_raro_input.lower()
 
-# Entrada do usuário
-intensidade_feitico = int(input())
-componente_raro_feitico = input()
-fase_lunar_feitico = input()
-idade_feiticeiro = int(input ())
-afinidade_animais_feiticeiro = input()
+fase_lunar_input = input("Qual a fase lunar? ")
+fase_lunar = fase_lunar_input.lower()
 
-# Fazendo a previsão
-resultado = prever_afinidade_elemental(intensidade_feitico, componente_raro_feitico, fase_lunar_feitico, idade_feiticeiro, afinidade_animais_feiticeiro)
+idade_feiticeiro = int(input("Qual a idade do feiticeiro? "))
 
-# Saída da previsão
-print(resultado)
+afinidade_animais_input = input("Afinidade com animais mágicos? ")
+afinidade_animais = afinidade_animais_input.lower()
+
+# Definir a presença de componente e afinidade animais como booleano
+if componente_raro == "sim":
+    componente_raro = True
+else:
+    componente_raro = False
+
+if afinidade_animais == "sim":
+    afinidade_animais = True
+else:
+    afinidade_animais = False
+
+# OBS: divergência entre o enunciado apresentado e os testes usados como exemplo. Código feito de acordo com os exemplos e testes.
+# Atribuir os inputs aos elementos:
+if intensidade_feitico >= 5 and fase_lunar == "crescente" and idade_feiticeiro > 100 and componente_raro and afinidade_animais:
+    print("A afinidade elemental do feiticeiro é com o elemento Fogo!")
+elif intensidade_feitico >= 7 and fase_lunar == "cheia" and idade_feiticeiro <= 100 and componente_raro and not afinidade_animais:
+    print("A afinidade elemental do feiticeiro é com o elemento Água!")
+elif intensidade_feitico >= 7 and fase_lunar == "cheia" and idade_feiticeiro <= 100 and componente_raro and afinidade_animais:
+    print("A afinidade elemental do feiticeiro é com o elemento Terra!")
+else:
+    print("A afinidade elemental do feiticeiro é com o elemento Ar!")
+
+# TODO: refazer usando funções e dicionários
